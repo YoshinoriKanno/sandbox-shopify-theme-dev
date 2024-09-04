@@ -89,6 +89,14 @@
             {%- case block.type -%}
               {%- when '@app' -%}
                 {% render block %}
+              {%- when 'release_date' -%}
+                Metafield value: {{ product.metafields.custom['_release-date'] }}
+
+                {%- if product.metafields.custom['_release-date'] != blank -%}
+                  <p>
+                    {{ block.settings.text }}
+                  </p>
+                {% endif %}
               {%- when 'text' -%}
                 <p
                   class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
@@ -2068,6 +2076,18 @@
           "default": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.default",
           "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.label",
           "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
+        }
+      ]
+    },
+    {
+      "type": "release_date",
+      "name": "発売日",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "発売日",
+          "default": "発売日"
         }
       ]
     }
