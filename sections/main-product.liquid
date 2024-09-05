@@ -666,6 +666,11 @@
                 {% render 'icon-with-text', block: block %}
             {%- endcase -%}
           {%- endfor -%}
+          <p class="line-item-property__field">
+            <label for="engraveText">刻印する文言</label>
+            <input id="engraveText" type="text" name="properties[刻印する文言]" form="{{ product_form_id }}">
+          </p>
+
           <a href="{{ product.url }}" class="link product__view-details animate-arrow">
             {{ 'products.product.view_full_details' | t }}
             {% render 'icon-arrow' %}
