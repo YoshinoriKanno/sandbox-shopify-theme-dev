@@ -116,6 +116,12 @@
         "info": "t:settings_schema.typography.settings.type_header_font.info"
       },
       {
+        "type": "textarea",
+        "id": "type_body_jp_font",
+        "label": "日本語フォント設定",
+        "info": "この欄に入力された font-family をフォント設定に追加します。"
+      },
+      {
         "type": "range",
         "id": "heading_scale",
         "min": 100,
